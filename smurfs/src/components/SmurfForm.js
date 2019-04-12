@@ -48,7 +48,7 @@ class SmurfForm extends React.Component {
     }
 }
 
-mapStateToProps = state => {
+const mapStateToProps = state => {
     return {
         smurf: state.addSmurf
     }

@@ -7,4 +7,29 @@ class SmurfForm extends React.Component {
         age: '',
         height: '',
     }
+
+    render(){
+        return (
+            <form>
+                <input
+                type='text'
+                name='name'
+                placeholder='name'
+                value={this.state.name}
+                onChange={this.handleChange}/>
+                <input
+                type='text'
+                name='age'
+                placeholder='age'
+                value={this.state.age}
+                onChange={this.handleChange} />
+                <input
+                type='text'
+                name='height'
+                placeholder='height'
+                value={this.state.height}
+                onChange={this.handleChange} />
+            </form>
+        )
+    }
 }

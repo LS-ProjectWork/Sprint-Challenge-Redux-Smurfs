@@ -7,7 +7,7 @@ import {
   FETCH_FAILURE
 } from '../actions'
 
-initialState = {
+const initialState = {
   smurfs: [],
   fetchingSmurfs: false,
   addingSmurf: false,
@@ -22,7 +22,7 @@ initialState = {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-export default reducer = (state = initialState, {type, payload}) => {
+const reducer = (state = initialState, {type, payload}) => {
   switch (type) {
     case LOAD_START:
       return {
@@ -58,3 +58,5 @@ export default reducer = (state = initialState, {type, payload}) => {
       }
   }
 }
+
+export default reducer;

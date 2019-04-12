@@ -56,6 +56,8 @@ const reducer = (state = initialState, {type, payload}) => {
         ...state,
         error: payload.data.error
       }
+    default:
+     return state
   }
 }
 

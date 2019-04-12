@@ -10,7 +10,7 @@ export const addSmurf = cred => dispatch => {
   .post('http://localhost:3333/smurfs', cred)
   .then(res => {
     console.log(res)
-    dispatch({ type: LOAD_SUCCESS, payload: res })
+    dispatch({ type: LOAD_SUCCESS, payload: res.data })
   })
   .catch(err => console.log(err))
 }
@@ -24,7 +24,8 @@ export const getSmurfs = () => dispatch => {
   axios
   .get('http://localhost:3333/smurfs')
   .then(res => {
-    dispatch({ type: FETCH_SUCCESS, payload: res })
+    console.log(res)
+    dispatch({ type: FETCH_SUCCESS, payload: res.data })
   })
   .catch(err => console.log(err))
 }
